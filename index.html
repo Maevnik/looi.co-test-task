@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,16 +6,18 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<script src="js/angular.min.js"></script>
+<script src="js/script.js"></script>
 <div class="container" ng-app="GalleryApp" ng-controller="GalleryCtrl">
   <div class="gallery" ng-if="grid==true">
     <div class="sidebar" ng-if="sidebar==true">
       <h1>
-    Галлерея на ангуляре
+    Gallary on ng
     </h1>
       <p>
-        *Галлерея без медиавис и медиа-запросов
-        <br> *Боковое и верхнее меню
-        <br> *Увеличение при клике на весь экран
+        *Gallery without media-queries
+        <br> *With top and side items
+        <br> *On-click fullscreen scaling
         <br>
       </p>
     </div>
@@ -26,7 +27,7 @@
       </div>
       <div id='gallery' class="gallery">
         <div class="thumbnail" ng-repeat="image in images" ng-style="imagesize" ng-click="open_image(image)">
-          <img src="{{image}}" />
+          <img src="{{image}}"/>
         </div>
       </div>
     </div>
@@ -35,11 +36,9 @@
     <div class="fullscreen_image">
       <img src="{{fullscreen_img}}"/>
     </div>
-    <div class="close" ng-click="close_image()">(x)Закрыть</div>
+    <div class="close" ng-click="close_image()">(x)Close</div>
   </div>
 </div>
-<script src="js/angular.min.js"></script>
-<script src="js/scripts.js"></script>
 	
 </body>
 </html>
